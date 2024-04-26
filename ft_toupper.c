@@ -6,11 +6,9 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:03:43 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/18 18:23:26 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:47:48 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

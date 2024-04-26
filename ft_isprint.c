@@ -6,11 +6,9 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:28:11 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/22 10:16:54 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:49:44 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
