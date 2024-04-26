@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:31:14 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/18 18:03:08 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:55:10 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (src_len);//needed?
 	if (dst_len >= dstsize)
-		dst_len = dstsize; //-1 caused francinette to KO
+		dst_len = dstsize;
 	if (dst_len < dstsize - 1 && dstsize > 0)
 	{
 		while (src[i] && dst_len + i < dstsize - 1)

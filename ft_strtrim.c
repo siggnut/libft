@@ -6,15 +6,12 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 11:47:39 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/24 14:21:05 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:56:08 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//iterate through s1 and set when set is matched trim the whole string(strnstr here?) set of chars
-//malloc, check matc before malloc?
-//removed from beginning or end of string
-//start++ & end--
+
 static	char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	size_t	i;

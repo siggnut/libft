@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:32:27 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 16:46:44 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:54:28 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &a[--i], 1);
 	}
 }
-/*
-#include <unistd.h>
-int main() {
-    int fd = 1; // Standard output (terminal)
-
-    ft_putnbr_fd(12345, fd); // Writes "12345" to standard output
-    write(fd, "\n", 1); // Newline for clarity
-
-    ft_putnbr_fd(-12345, fd); // Writes "-12345" to standard output
-    write(fd, "\n", 1); // Newline for clarity
-
-    return 0;
-}
-*/

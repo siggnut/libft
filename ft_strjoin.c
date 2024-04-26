@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 19:46:09 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/24 11:43:56 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:54:57 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[s1_len + s2_len] = '\0';
 	return (join);
 }
-
-// len of both, allocate enough for new, strlcat call?

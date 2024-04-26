@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:14:27 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 16:16:43 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:54:33 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-//index?
