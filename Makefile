@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+         #
+#    By: shyvonen <sumu.hyvonen@student.hive.fi>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 13:49:43 by shyvonen          #+#    #+#              #
-#    Updated: 2024/04/26 16:47:52 by shyvonen         ###   ########.fr        #
+#    Updated: 2024/04/29 15:16:45 by shyvonen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRC = ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putnbr_fd.c \
 
+BONUS =
+
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 AR = ar rcs
@@ -54,6 +56,8 @@ RM = rm -f
 HEAD = libft.h
 
 OBJS = $(SRC:.c=.o)
+
+BONUS_OBJS =
 
 all: $(NAME)
 
