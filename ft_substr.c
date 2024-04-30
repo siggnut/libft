@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:53:06 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:56:24 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:05:13 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*substr;
 
-    if (s == NULL)
-        return (NULL);
+	if (s == NULL)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (start > s_len)
 		return (ft_strdup(""));

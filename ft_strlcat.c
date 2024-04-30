@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:31:14 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:55:10 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:17:53 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	j = dst_len;
-	/*if (dst_len == dstsize) //needed?
-		return (dst_len + src_len);*/
 	if (dstsize == 0)
-		return (src_len);//needed?
+		return (src_len);
 	if (dst_len >= dstsize)
 		dst_len = dstsize;
 	if (dst_len < dstsize - 1 && dstsize > 0)

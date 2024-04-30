@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:32:27 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:54:28 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:06:37 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-    int i;
-    char a[10];
+	int		i;
+	char	a[10];
 
-    i = 0;
-    if (n == 0)
-        write(fd, "0", 1);
+	i = 0;
+	if (n == 0)
+		write(fd, "0", 1);
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
-    if (n < 0)
-    {
-        n = -n;
-        write(fd, "-", 1);
-    }
-    while (n > 0)
-    {
-        a[i++] = (n % 10) + 48;
-        n /= 10;
-    }
-    while (i > 0)
-    {    
+	else if (n < 0)
+	{
+		n = -n;
+		write(fd, "-", 1);
+	}
+	while (n > 0)
+	{
+		a[i++] = (n % 10) + 48;
+		n /= 10;
+	}
+	while (i > 0)
+	{
 		write(fd, &a[--i], 1);
 	}
 }
