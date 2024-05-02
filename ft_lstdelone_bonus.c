@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:33:00 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/05/02 15:39:40 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:36:12 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
+	if (!lst || !del)
 		return ;
-	if (lst->content != NULL && del != NULL)
-	{
-		del(lst->content);
-	}
+	del(lst->content);
 	free (lst);
 }

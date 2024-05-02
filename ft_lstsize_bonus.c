@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:03:39 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/05/02 14:20:48 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:41:50 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	current = lst;
 	count = 0;
-	while (current)
+	while (current != NULL)
 	{
 		count++;
 		current = current->next;
