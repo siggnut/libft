@@ -6,29 +6,11 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 11:47:39 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:56:08 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:43:38 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n && src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -44,10 +26,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_strchr(set, *end))
 		end--;
 	len = end - start + 1;
-	trimmed = malloc(len + 1);
+	trimmed = (char *)malloc((len + 1) * sizeof(char));
 	if (trimmed == NULL)
 		return (NULL);
-	ft_strncpy(trimmed, start, len);
+	ft_memcpy(trimmed, start, len);
 	trimmed[len] = '\0';
 	return (trimmed);
 }

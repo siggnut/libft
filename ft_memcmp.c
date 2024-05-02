@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:18:04 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:54:04 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:09:34 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (str1[i] != str2[i])
 		{
 			return (str1[i] - str2[i]);
-			
 		}
 		i++;
 	}

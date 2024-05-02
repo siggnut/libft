@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shyvonen <sumu.hyvonen@student.hive.fi>    +#+  +:+       +#+        */
+/*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:41:21 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/29 15:48:50 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:52:41 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (lst == NULL || *lst == NULL)
-		return;
-	t_list	*current = *lst;
+	t_list	*current;
 	t_list	*next_node;
+
+	current = *lst;
+	if (!lst || !*lst)
+		return ;
 	while (current != NULL)
 	{
 		next_node = current->next;

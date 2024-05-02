@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:53:06 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/30 16:05:13 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:08:09 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (start + len > s_len)
 		len = s_len - start;
-	substr = (char *)malloc(len + 1);
+	substr = (char *)malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_memcpy (substr, s + start, len);

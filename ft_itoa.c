@@ -6,61 +6,66 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:39:07 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/26 17:53:49 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:42:23 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	num_count(int n)
+static int	num_count(long num)
 {
-	int	count;
+	int		count;
 
 	count = 0;
-	if (n == 0)
-		count = 1;
-	if (n < 0)
-		count++;
-	while (n)
+	if (num == 0)
+		return (1);
+	if (num < 0)
 	{
-		n /= 10;
+		count++;
+		num = -num;
+	}
+	while (num)
+	{
+		num /= 10;
 		count++;
 	}
 	return (count);
 }
 
+static char	*alloc_size(int count)
+{
+	char	*temp;
+
+	temp = (char *)malloc((count + 1) * sizeof(char));
+	if (!temp)
+		return (NULL);
+	temp[0] = '0';
+	return (temp);
+}
+
 char	*ft_itoa(int n)
 {
-	int		neg;
-	char	*str;
+	char	*result;
 	int		i;
-	long	count;
 	long	num;
+	long	count;
 
 	num = (long)n;
-	count = num_count(n);
-	neg = 0;
+	count = num_count(num);
 	i = count - 1;
-	str = (char *)malloc(count + 1);
-	if (str == NULL)
+	result = alloc_size(count);
+	if (!result)
 		return (NULL);
-	str[count] = '\0';
+	result[count] = '\0';
 	if (num < 0)
 	{
-		neg = 1;
 		num = -num;
+		result[0] = '-';
 	}
-	if (num == 0)
+	while (num)
 	{
-		str[i] = '0';
-		return (str);
-	}
-	while (num > 0)
-	{
-		str[i--] = (num % 10) + '0';
+		result[i--] = (num % 10) + '0';
 		num /= 10;
 	}
-	if (neg)
-		str[i--] = '-';
-	return (str);
+	return (result);
 }

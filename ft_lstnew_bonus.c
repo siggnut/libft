@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shyvonen <sumu.hyvonen@student.hive.fi>    +#+  +:+       +#+        */
+/*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:52:39 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/04/29 14:58:34 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:19:57 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new_node = (t_list *)malloc(sizeof(t_list));
+	t_list	*new_node;
 
+	new_node = (t_list *)malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;
