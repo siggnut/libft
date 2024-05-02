@@ -6,7 +6,7 @@
 /*   By: shyvonen <shyvonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:18:26 by shyvonen          #+#    #+#             */
-/*   Updated: 2024/05/02 17:07:41 by shyvonen         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:14:55 by shyvonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total;
 
 	total = size * count;
-	if ((count && total / count != size) || total > SIZE_MAX)
+	if ((count != 0 && total / count != size) || total > SIZE_MAX)
 		return (NULL);
 	result = malloc(total);
 	if (!result)
